@@ -1,5 +1,8 @@
+using NUnit.Framework;
+
 namespace calcolator_tester
 {
+    [TestFixture]
     public class Tests
     {
         [SetUp]
