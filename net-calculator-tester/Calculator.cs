@@ -14,8 +14,24 @@ namespace Calculator
 
         public static float Divide(float x, float y) 
         {
-            if (x == 0 || y == 0) throw new ArgumentException("usare zero come dividendo o divisore non è possibile");
-            return x / y;
+            if (x == 0 && y == 0)
+            {
+                return (float.NaN);
+            }
+            else if (x > 0 && y == 0)
+            {
+                return (float.PositiveInfinity);
+
+            }
+            else if (x < 0 && y == 0)
+            {
+                return (float.NegativeInfinity);
+
+            }
+            else 
+            { 
+                return x / y;
+            }
         }
 
         public static float Multiply(float x, float y) { return x * y; }

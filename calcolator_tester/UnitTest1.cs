@@ -45,6 +45,28 @@ namespace calcolator_tester
         }
 
         [Test]
+        [TestCase(0)]
+        [TestCase(10)]
+        [TestCase(-10)]
+        public void DivideByZero(float a)
+        {
+            if (a == 0)
+            {
+                Assert.That(Calc.Divide(a, 0), Is.EqualTo(float.NaN));
+            }
+            else if (a > 0)
+            {
+                Assert.That(Calc.Divide(a, 0), Is.EqualTo(float.PositiveInfinity));
+
+            }
+            else
+            {
+                Assert.That(Calc.Divide(a, 0), Is.EqualTo(float.NegativeInfinity));
+
+            }
+        }
+
+        [Test]
         [TestCase(10, 5, 50)]
         [TestCase(10, -5, -50)]
         [TestCase(-10, 5, -50)]
