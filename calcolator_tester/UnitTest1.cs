@@ -19,7 +19,7 @@ namespace calcolator_tester
         [TestCase(0, 0, 0)]
         public void Add(float a, float b, float c)
         {
-            Assert.That(Calculator.Add(a, b), Is.EqualTo(c));
+            Assert.That(Calc.Add(a, b), Is.EqualTo(c));
         }
 
         [Test]
@@ -31,7 +31,7 @@ namespace calcolator_tester
         [TestCase(0, 0, 0)]
         public void Subtract(float a, float b, float c)
         {
-            Assert.That(Calculator.Subtract(a, b), Is.EqualTo(c));
+            Assert.That(Calc.Subtract(a, b), Is.EqualTo(c));
         }
 
         [Test]
@@ -41,11 +41,11 @@ namespace calcolator_tester
         [TestCase(-10, -2, 5)]
         public void Divide(float a, float b, float c)
         {
-            Assert.That(Calculator.Divide(a, b), Is.EqualTo(c));
+            Assert.That(Calc.Divide(a, b), Is.EqualTo(c));
         }
 
         [Test]
-        [TestCase(10, 5, 20)]
+        [TestCase(10, 5, 50)]
         [TestCase(10, -5, -50)]
         [TestCase(-10, 5, -50)]
         [TestCase(-10, -5, 50)]
@@ -54,7 +54,7 @@ namespace calcolator_tester
         [TestCase(0, 0, 0)]
         public void Multiply(float a, float b, float c)
         {
-            Assert.That(Calculator.Multiply(a, b), Is.EqualTo(c));
+            Assert.That(Calc.Multiply(a, b), Is.EqualTo(c));
         }
     }
 }
